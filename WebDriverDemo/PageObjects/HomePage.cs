@@ -14,7 +14,7 @@ namespace WebDriverDemo.PageObjects
 
         [FindsBy(How = How.Id, Using = "account")]
         [CacheLookup]
-        public IWebElement MyAccount { get; set; }
+        private IWebElement MyAccount { get; set; }
 
         public HomePage(IWebDriver driver)
         {
@@ -22,6 +22,10 @@ namespace WebDriverDemo.PageObjects
             PageFactory.InitElements(driver, this);
         }
 
+        public void ClickOnMyAccount()
+        {
+            MyAccount.Click();
+        }
     }
 
 }

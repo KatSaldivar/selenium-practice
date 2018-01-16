@@ -22,7 +22,7 @@ namespace WebDriverDemo.PageObjects
                 driver.Url = "http://www.store.demoqa.com";
 
                 var homePage = new HomePage(driver);
-                homePage.MyAccount.Click();
+                homePage.ClickOnMyAccount();
 
                 var loginPage = new LoginPage(driver);
                 loginPage.LoginToApplication();
