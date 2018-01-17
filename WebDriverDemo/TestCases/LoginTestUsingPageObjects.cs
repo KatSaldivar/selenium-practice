@@ -8,6 +8,7 @@ using WebDriverDemo.PageObjects;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.PageObjects;
+using System.Configuration;
 
 namespace WebDriverDemo.PageObjects
 {
@@ -19,7 +20,7 @@ namespace WebDriverDemo.PageObjects
             {
 
                 IWebDriver driver = new ChromeDriver();
-                driver.Url = "http://www.store.demoqa.com";
+                driver.Url = ConfigurationManager.AppSettings["URL"];
 
                 var homePage = new HomePage(driver);
                 homePage.ClickOnMyAccount();

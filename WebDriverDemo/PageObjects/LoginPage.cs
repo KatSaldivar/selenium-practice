@@ -10,7 +10,7 @@ namespace WebDriverDemo.PageObjects
 {
     class LoginPage
     {
-            private IWebDriver driver;
+        private IWebDriver driver;
 
         [FindsBy(How = How.Id, Using = "log")]
         [CacheLookup]
