@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using WebDriverDemo.TestDataAccess;
 
 namespace WebDriverDemo.PageObjects
 {
@@ -30,10 +31,11 @@ namespace WebDriverDemo.PageObjects
             PageFactory.InitElements(driver, this);
         }
 
-        public void LoginToApplication()
+        public void LoginToApplication(string testName)
         {
-            UserName.SendKeys("TestUser_1");
-            Password.SendKeys("Test@123");
+            var userData = ExcelDataAccess.GetTestData(testName);
+            UserName.SendKeys(userData.Username);
+            Password.SendKeys(userData.Password);
             Submit.Submit();
         }
 

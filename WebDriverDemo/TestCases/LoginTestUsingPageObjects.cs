@@ -26,7 +26,7 @@ namespace WebDriverDemo.PageObjects
                 homePage.ClickOnMyAccount();
 
                 var loginPage = new LoginPage(driver);
-                loginPage.LoginToApplication();
+                loginPage.LoginToApplication("LogInTest");
 
                 driver.Close();
         }
