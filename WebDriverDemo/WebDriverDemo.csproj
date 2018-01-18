@@ -72,11 +72,13 @@
     <Compile Include="TestDataAccess\ExcelDataAccess.cs" />
     <Compile Include="TestDataAccess\UserData.cs" />
     <Compile Include="WindowTest.cs" />
+    <Compile Include="WrapperFactory\BrowserFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="configurations\Environment.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
     <None Include="TestDataAccess\TestData.xlsx" />
