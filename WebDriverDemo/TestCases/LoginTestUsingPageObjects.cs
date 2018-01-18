@@ -10,6 +10,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.PageObjects;
 using System.Configuration;
 using WebDriverDemo.WrapperFactory;
+using WebDriverDemo.PageObjects.OnlineStore.PageObjects;
 
 namespace WebDriverDemo.TestCases
 {
@@ -24,14 +25,11 @@ namespace WebDriverDemo.TestCases
                 BrowserFactory.InitBrowser("Chrome");
                 BrowserFactory.LoadApplication(ConfigurationManager.AppSettings["URL"]);
 
-                var homePage = new HomePage(WrapperFactory.BrowserFactory.driver);
-                homePage.ClickOnMyAccount();
+                Page.Home.ClickOnMyAccount();
+                Page.Login.LoginToApplication("LogInTest");
 
-                var loginPage = new LoginPage(WrapperFactory.BrowserFactory.driver);
-                loginPage.LoginToApplication("LogInTest");
-            
                 BrowserFactory.CloseAllDrivers();
-        }
+            }
 
         
     }

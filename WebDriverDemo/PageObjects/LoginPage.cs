@@ -9,7 +9,7 @@ using WebDriverDemo.TestDataAccess;
 
 namespace WebDriverDemo.PageObjects
 {
-    class LoginPage
+    public class LoginPage
     {
         private IWebDriver driver;
 
@@ -24,13 +24,7 @@ namespace WebDriverDemo.PageObjects
         [FindsBy(How = How.Id, Using = "login")]
         [CacheLookup]
         private IWebElement Submit { get; set; }
-
-        public LoginPage(IWebDriver driver)
-        {
-            this.driver = driver;
-            PageFactory.InitElements(driver, this);
-        }
-
+        
         public void LoginToApplication(string testName)
         {
             var userData = ExcelDataAccess.GetTestData(testName);
