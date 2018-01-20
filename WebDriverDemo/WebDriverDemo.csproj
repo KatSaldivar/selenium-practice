@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlertTests.cs" />
+    <Compile Include="Extensions\Element_Extensions.cs" />
     <Compile Include="NUnitTest.cs" />
     <Compile Include="PageObjects\HomePage.cs" />
     <Compile Include="PageObjects\LoginPage.cs" />
