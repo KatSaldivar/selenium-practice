@@ -15,6 +15,7 @@ namespace WebDriverDemo.PageObjects
         [FindsBy(How = How.Id, Using = "log")]
         [CacheLookup]
         private IWebElement UserName { get; set; }
+        //private IWebElement screenLogin = Browser.Driver.FindElement(By.Id("log"));
 
         [FindsBy(How = How.Id, Using = "pwd")]
         [CacheLookup]

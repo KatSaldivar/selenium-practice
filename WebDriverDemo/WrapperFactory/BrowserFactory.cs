@@ -38,15 +38,15 @@ namespace WebDriverDemo.WrapperFactory
                 case "Firefox": //DOESN'T WORK!!!
                     if (Driver == null)
                     {
-                        driver = new FirefoxDriver(@"C:\Users\Katie\Documents\selenium\geckodriver");
+                        driver = new FirefoxDriver(@"C:\Users\Katie\Documents\selenium\selenium-practice");
                         Drivers.Add("Firefox", Driver);
                     }
                     break;
 
-                case "IE": //DOESN'T WORK!!!
+                case "IE": 
                     if (Driver == null)
                     {
-                        driver = new InternetExplorerDriver(@"C:\Users\Katie\Documents\selenium\IEDriverServer");
+                        driver = new InternetExplorerDriver(@"C:\Users\Katie\Documents\selenium\selenium-practice");
                         Drivers.Add("IE", Driver);
                     }
                     break;
