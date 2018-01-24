@@ -15,12 +15,12 @@ namespace WebDriverDemo.WrapperFactory
     class BrowserFactory
     {
         private static readonly IDictionary<string, IWebDriver> Drivers = new Dictionary<string, IWebDriver>();
-        public static IWebDriver driver; //HAD TO MAKE THIS PUBLIC FOR TEST FILE. WHY???
+        private static IWebDriver driver; 
 
         public static IWebDriver Driver
         {
             get
-            { //THIS KEPT ERRORING OUT BEFORE RUNNING, IT WORKED AFTER COMMENTING OUT. WHY???
+            { //THIS KEPT ERRORING OUT BEFORE RUNNING, IT WORKED AFTER COMMENTING OUT.
                 //if (driver == null)
                     //throw new NullReferenceException("The WebDriver browser instance was not initialized. You should first call the method InitBrowser.");
                 return driver;
@@ -35,7 +35,7 @@ namespace WebDriverDemo.WrapperFactory
         {
             switch (browserName)
             {
-                case "Firefox": //DOESN'T WORK!!!
+                case "Firefox": 
                     if (Driver == null)
                     {
                         driver = new FirefoxDriver(@"C:\Users\Katie\Documents\selenium\selenium-practice");

@@ -22,7 +22,7 @@ namespace WebDriverDemo.TestCases
             public void PageObjectLoginTest()
             {
             
-                BrowserFactory.InitBrowser("Firefox");
+                BrowserFactory.InitBrowser("Chrome");
                 BrowserFactory.LoadApplication(ConfigurationManager.AppSettings["URL"]);
 
                 Page.Home.ClickOnMyAccount();

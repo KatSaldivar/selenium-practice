@@ -80,7 +80,7 @@ namespace WebDriverDemo
             //driver.Close();
 
             //     EXPLICIT WAIT 
-            driver.Url = "http://www.google.com";      //or driver.Navigate().GoToUrl("http://www.google.com");
+            driver.Navigate().GoToUrl("http://www.google.com"); //driver.Url = "http://www.google.com";      
             var searchBox = driver.FindElement(By.Id("lst-ib"));
             searchBox.SendKeys("selenium");
             searchBox.SendKeys(Keys.Enter);
