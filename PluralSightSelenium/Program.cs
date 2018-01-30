@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,12 +11,13 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
 
-namespace WebDriverDemo
+
+namespace PluralSightSelenium
 {
     class Program
     {
         static void Main(string[] args)
-        {  /*
+        {
             //https://github.com/SeleniumHQ/selenium/wiki/Grid2
             //DesiredCapabilities capability = new DesiredCapabilities(); http://10.3.1.185:4444
             //ChromeOptions options = new ChromeOptions();
@@ -78,7 +78,7 @@ namespace WebDriverDemo
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(500);
             firstImageLink.Click();*/
             //driver.Close();
-            /*
+
             //     EXPLICIT WAIT 
             driver.Navigate().GoToUrl("http://www.google.com"); //driver.Url = "http://www.google.com";      
             var searchBox = driver.FindElement(By.Id("lst-ib"));
@@ -91,7 +91,7 @@ namespace WebDriverDemo
                 //if using elements (plural) you will need to modify to avoid getting an exception
                 //var elements = driver.FindElements(By.ClassName("k1"));
                 //if elements.Count > 0
-                    //return elements[0];
+                //return elements[0];
                 //return null;
             });
             imagesLink.Click();
@@ -99,7 +99,7 @@ namespace WebDriverDemo
             //driver.PageSource.Contains() //checks that something is on the page
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(500);
             firstImageLink.Click();
-            //driver.Close();*/
+            //driver.Close();
         }
     }
 }
